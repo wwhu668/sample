@@ -33,5 +33,5 @@ resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
 
 get('/users/{id}/followings', 'UsersController@followings')->name('users.followings');
 get('/users/{id}/followers', 'UsersController@followers')->name('users.followers');
-post('/users/followers/{id}', 'FollowersController@store')->name('followers.store');
-delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.destroy');
+Route::post('/users/followers/{id}', 'FollowersController@store')->name('followers.store');
+Route::delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.destroy');
